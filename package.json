@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/esan5574/studbud/issues"
   },
-  "homepage": "https://github.com/esan5574/studbud#readme"
+  "homepage": "https://github.com/esan5574/studbud#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
