@@ -1,0 +1,29 @@
+nav {
+    width: 120px;
+    height: 100vh;
+    flex-direction: row;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: #123;
+    display: flex;
+    justify-content: space-around;
+    
+    .nav-links {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        .nav-item a{
+            display: block;
+            padding: 2em 0;
+            text-decoration: none;
+            color: white;
+            &:hover {
+                color: #abc;
+            }
+            &.active {
+                font-weight: bold;
+            }
+        }
+    }
+}

@@ -1,12 +1,37 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-  <title>Hello, world!</title>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <meta name="description" content="" />
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>repl.it</title>
+	<link href="scss/main.scss" rel="stylesheet" type="text/css">
 </head>
-<body>
-  <h1>Hello, world!</h1>
+
+<body class="app-container">
+    <nav class="top-nav">
+        <ul class="nav-links">
+            <li class="nav-item"><a href=#home class="active">Home</a></li>
+            <li class="nav-item"><a href=#page1>Page 1</a></li>
+            <li class="nav-item"><a href=#page2>Page 2</a></li>
+        </ul>
+    </nav>
+
+    <div id="home" class="page-container">
+        <h1>Hello World Wide Web</h1>
+	    <p>This time with <a href="https://expressjs.com/">Express</a> + <a href="https://v2.parceljs.org/">Parcel</a> + <a href="https://sass-lang.com/">SASS (SCSS)</a>!</p>
+    </div>
+
+    <div id="page1" class="page-container">
+        <h1>Page 1</h1>
+    </div>
+
+    <div id="page2" class="page-container">
+        <h1>Page 2</h1>
+    </div>
+	
+	<script src="script.js">
+	</script>
 </body>
+
 </html>
