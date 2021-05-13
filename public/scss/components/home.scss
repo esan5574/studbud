@@ -1,0 +1,29 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#home-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas:
+      "tasklist timer"
+      "tasklist music"
+      "tasklist .";
+}
+#tasklist { 
+    grid-area: tasklist; 
+    background-color: #6699D4; 
+    border-radius: 20px;
+}
+
+#timer { 
+    grid-area: timer;
+    background-color: rebeccapurple; 
+}
+
+#music { 
+    grid-area: music; 
+}
+  
