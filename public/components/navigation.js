@@ -12,9 +12,9 @@ class Navigation {
         console.log(this.currentPage);
 
         this.links.forEach((link) => {
-            link.classList.remove('active');
+            link.classList.remove('nav-active');
             if (this.getHash(link) === pageId) {
-                link.classList.add('active');
+                link.classList.add('nav-active');
             }
         })
         this.pages.forEach((page) => {
