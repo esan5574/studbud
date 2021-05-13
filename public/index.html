@@ -13,50 +13,65 @@
     <nav class="top-nav">
         <ul class="nav-links">
             <li class="nav-item"><a href=#home class="active"><i class="material-icons" style="font-size:40px;">home</i></a></li>
-            <li class="nav-item"><a href=#page1> <i class="material-icons" style="font-size:40px;">dashboard</i></a></li>
-            <li class="nav-item"><a href=#page2>A</a></li>
+            <li class="nav-item"><a href=#myboard> <i class="material-icons" style="font-size:40px;">dashboard</i></a></li>
+            <li class="nav-item"><a href=#acronymmaker>A</a></li>
         </ul>
     </nav>
 
     <div id="home" class="page-container">
         <h1>HOME</h1>
-        <button class="open-button" onclick="openForm()">+</button>
-        
-        <div class="form-popup" id="myForm">
-            <form id="taskform" class="form-container">
-                <h1>ADD TASK<button type="button" class="btn-cancel" onclick="closeForm()">x</button></h1>
-                <label for="task">Task:</label>
-                <input type="text" name="task" id="taskInput">
-                <br>
-                <label for="completionTime">Due:</label>
-                <input type="time" name="completionTime" id="completionTimeInput">
-                <label for="dueDate">,</label>
-                <input type="date" name="dueDate" id="dueDateInput">
-                <br>
-                <label for="estimatedTime">Time:</label>
-                <input type="number" name="estimatedTime" id="estimatedTimeInput">
-                <br>
-                <label for="priority">Task Priority:</label>
-                <select name="priority" id="priorityInput">
-                    <option vale="">Select one</option>
-                    <option value="Low">Low</option>
-                    <option value="Medium">Medium</option>
-                    <option value="High">High</option>
-                </select>
-                <br>
-                <button type="submit" class="submit">ADD TASK</button>    
-            </form>
-  
-            <ul id="tasklist"></ul>
+        <div id="home-grid">
+            <!-- comment -->
+            <button class="open-button" onclick="openForm()">+</button>
+            <div class="form-popup" id="myForm">
+                <form id="taskform" class="form-container">
+                    <h3>ADD TASK<button type="button" class="btn-cancel" onclick="closeForm()">x</button></h3>
+                    <label for="task">Task:</label>
+                    <input type="text" name="task" id="taskInput">
+                    <br>
+                    <label for="completionTime">Due:</label>
+                    <input type="time" name="completionTime" id="completionTimeInput">
+                    <label for="dueDate">,</label>
+                    <input type="date" name="dueDate" id="dueDateInput">
+                    <br>
+                    <label for="estimatedTime">Time:</label>
+                    <input type="number" name="estimatedTime" id="estimatedTimeInput">
+                    <br>
+                    <label for="priority">Task Priority:</label>
+                    <select name="priority" id="priorityInput">
+                        <option vale="">Select one</option>
+                        <option value="Low">Low</option>
+                        <option value="Medium">Medium</option>
+                        <option value="High">High</option>
+                    </select>
+                    <button type="submit" class="submit">ADD TASK</button>    
+                </form>
+            </div>
+            <div id="tasklist">
+                <p id="emptyList">You have not added any task yet.</p>
+                <ul></ul>
+            </div>
+            <div id="timer">
+                <p>the timer will go here</p>
+            </div>
+            <div id="pomodoro">
+                <button class="accordion">POMODORO TIMER</button>
+                <div class="panel">
+                    <p>the pomodoro will go here</p>
+                </div>
+            </div>
+            <div id="music">
+                <p>the music player will go here</p>
+            </div>
         </div>
     </div>
 
-    <div id="page1" class="page-container">
-        <h1>Page 1</h1>
+    <div id="myboard" class="page-container">
+        <h1>MY BOARD</h1>
     </div>
 
-    <div id="page2" class="page-container">
-        <h1>Page 2</h1>
+    <div id="acronymmaker" class="page-container">
+        <h1>ACRONYM MAKER</h1>
     </div>
 	
 	<script src="script.js">
