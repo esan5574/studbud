@@ -1,4 +1,4 @@
-function openForm(){
+function openForm(){ // change to event listener
     document.getElementById("myForm").style.display = "block";
 }
 function closeForm(){
