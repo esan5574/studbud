@@ -47,18 +47,27 @@
                     <button type="submit" class="submit">ADD TASK</button>    
                 </form>
             </div>
+            
             <div id="tasklist">
                 <p id="emptyList">You have not added any task yet.</p>
                 <ul></ul>
             </div>
-            <div id="timer">
-                <p>the timer will go here</p>
-            </div>
-            <div id="pomodoro">
-                <button class="accordion">POMODORO TIMER</button>
+            
+            <div id="stopwatch">
+                <button class="accordion">STOPWATCH</button>
                 <div class="panel">
-                    <p>the pomodoro will go here</p>
+                    <p class="s-time">00:00:00</p>
+                    <ul id="t-buttons">
+                        <li><button id="start">Start</button></li>
+                        <li><button id="pause">Stop</button></li>
+                        <li><button id="reset">Reset</button></li>
+                    </ul>
                 </div>
+            </div>
+            
+            <div id="pomodoro">
+                <p>the pomodoro will go here</p>
+                
             </div>
             <div id="music">
                 <p>the music player will go here</p>
