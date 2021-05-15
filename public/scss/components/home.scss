@@ -7,10 +7,11 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
+    gap: 15px 40px;
     grid-template-areas:
-      "tasklist timer"
-      "tasklist music"
-      "tasklist .";
+      "tasklist stopwatch"
+      "tasklist pomodoro"
+      "tasklist music";
 }
 #tasklist { 
     grid-area: tasklist; 
@@ -18,12 +19,25 @@
     border-radius: 20px;
 }
 
-#timer { 
-    grid-area: timer;
-    background-color: rebeccapurple; 
+#stopwatch { 
+    grid-area: stopwatch;
+    background-color: #DEDEDE;
+    border-radius: 20px;
+    
+}
+#pomodoro { 
+    grid-area: pomodoro;
+    background-color: #3AA26D;
+    border-radius: 20px;
+    
+}
+#music { 
+    grid-area: music;
 }
 
-#music { 
-    grid-area: music; 
+#music iframe{ 
+    border-radius: 20px;
 }
+
+
   
