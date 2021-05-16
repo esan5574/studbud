@@ -22,10 +22,10 @@
         <h1>HOME</h1>
         <div id="home-grid">
             <!-- comment -->
-            <button class="open-button" onclick="openForm()">+</button>
+            <button id="openButton">+</button>
             <div class="form-popup" id="myForm">
                 <form id="taskform" class="form-container">
-                    <h3>ADD TASK<button type="button" class="btn-cancel" onclick="closeForm()">x</button></h3>
+                    <h3>ADD TASK<button type="button" id="btnCancel" >x</button></h3>
                     <label for="task">Task:</label>
                     <input type="text" name="task" id="taskInput">
                     <br>
@@ -66,11 +66,12 @@
             </div>
             
             <div id="pomodoro">
-                <p>the pomodoro will go here</p>
-                
+                <p>the pomodoro will go here</p>    
             </div>
+
             <div id="music">
-                <iframe src="https://open.spotify.com/embed/playlist/3LRyTLTD5L8fmRnpSajyq1" width="550" height="340"  frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+               <!--<iframe src="https://open.spotify.com/embed/playlist/3LRyTLTD5L8fmRnpSajyq1" width="550" height="340"  frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+               -->
             </div>
         </div>
     </div>
