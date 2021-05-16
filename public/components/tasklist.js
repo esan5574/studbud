@@ -1,7 +1,10 @@
-function openForm(){ // change to event listener
-    document.getElementById("myForm").style.display = "block";
+openButton.addEventListener("click", openForm);
+function openForm(){ 
+  document.getElementById("myForm").style.display = "block";
 }
-function closeForm(){
+
+btnCancel.addEventListener("click", closeForm);
+function closeForm(){ 
   document.getElementById("myForm").style.display = "none";
 }
 
