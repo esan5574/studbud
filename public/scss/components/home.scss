@@ -17,6 +17,19 @@
     grid-area: tasklist; 
     background-color: #6699D4; 
     border-radius: 20px;
+    position: relative;
+}
+#tasklist #openButton {
+    background-color: white;
+    font-size: 20px;
+    color: #6699D4;
+    height: 40px;
+    width: 40px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    bottom: 10px;
+    position: absolute;
 }
 
 #stopwatch { 
@@ -35,9 +48,7 @@
     grid-area: music;
 }
 
-#music iframe{ 
-    border-radius: 20px;
-}
+
 
 
   
