@@ -1,30 +1,68 @@
-.accordion {
-  background-color: #DEDEDE;
-  color: black;
-  cursor: pointer;
-  padding: 18px;
-  width: 100%;
-  border: none;
-  text-align: left;
-  outline: none;
-  font-size: 15px;
-  transition: 0.4s;
-}
-.accordion:after {
-    content: '\002B';
-    color: #777;
-    font-weight: bold;
-    float: right;
-    margin-left: 5px;
-}
-.p-active:after {
-    content: "\2212";
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    width: 100%;
+    min-height: 100vh;
+    background-color: #3AA26D;
   }
   
- 
-.panel {
-  padding: 0 18px;
-  display: none;
-  background-color: #DEDEDE;
-  overflow: hidden;
-}
+  #pomodoro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    
+  }
+  
+  #pomodoro .pt-time {
+    font-size: 50px;
+    color: #fff;
+    text-align: center;
+    margin: 0px;
+  
+  }
+  
+  #pomodoro .pt-buttons {
+    display: flex;
+    justify-content: center;
+  }
+  
+  #pomodoro .pt-buttons button {
+    color: black;
+    background-color: white;
+    border-radius: 20px;
+    border: none;
+    margin: 10px 5px 10px ;
+    padding: 10px 40px 10px 40px;
+    text-transform: uppercase;
+    cursor: pointer;
+    
+  }
+  
+  #pomodoro .pt-buttons button:hover {
+    color: #3AA26D;
+  }
+  
+  #pomodoro .options{
+    margin-top: 10px;
+  }
+  #pomodoro .options button {
+    margin: 0 5px;
+    padding: 10px 20px;
+    border: 1px solid #fff;
+    background: none;
+    color: #fff;
+    border-radius: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+  
+  #pomodoro .options button:hover {
+    background-color: white;
+    color: #3AA26D;
+  }
+  
+  
+  
