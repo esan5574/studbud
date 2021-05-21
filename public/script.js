@@ -1,5 +1,6 @@
 import Navigation from './components/navigation';
 import './components/tasklist';
+import './components/stopwatch';
 import './components/pomodoro';
 
 const links = document.querySelectorAll('nav > ul > li > a');
