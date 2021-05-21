@@ -1,5 +1,5 @@
 nav {
-    width: 120px;
+    width: 100px;
     height: 100vh;
     flex-direction: row;
     position: absolute;
@@ -24,7 +24,7 @@ nav {
                 border-radius: 0.5em;
                 color: #3AA26D;
             }
-            &.active {
+            &.nav-active {
                 color: #3AA26D;
             }
         }

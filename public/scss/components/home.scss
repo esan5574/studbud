@@ -6,7 +6,8 @@
 #home-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: auto minmax(1fr,1fr,1fr);
+    align-items: start;
     gap: 15px 40px;
     grid-template-areas:
       "tasklist stopwatch"
@@ -19,7 +20,12 @@
     border-radius: 20px;
     position: relative;
 }
-#tasklist #openButton {
+#tasklist h3{ 
+    margin: 20px;
+    color: white;
+}
+
+#openButton {
     background-color: white;
     font-size: 20px;
     color: #6699D4;
@@ -30,24 +36,33 @@
     cursor: pointer;
     bottom: 10px;
     position: absolute;
+    left:0;
+    right:0;
+    margin-left:auto;
+    margin-right:auto;
 }
 
 #stopwatch { 
     grid-area: stopwatch;
     background-color: #DEDEDE;
-    border-radius: 20px;
-    
+    border-radius: 20px; 
 }
+
 #pomodoro { 
     grid-area: pomodoro;
     background-color: #3AA26D;
     border-radius: 20px;
-    
 }
 #music { 
     grid-area: music;
 }
 
+#music iframe{ 
+    width: 550px; 
+    height: 230px;  
+    border: none;
+    border-radius: 20px;
+}
 
 
 

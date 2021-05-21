@@ -1,4 +1,4 @@
-//referred to ---
+//referred to Dawidow's pomodoro timer code https://github.com/dawidow/pomodoro-timer-js .
 
 const timer = document.querySelector(".pt-time");
 const start = document.querySelector(".pt-start");
