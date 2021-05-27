@@ -2,6 +2,7 @@ import Navigation from './components/navigation';
 import './components/tasklist';
 import './components/stopwatch';
 import './components/pomodoro';
+import './components/acronym';
 
 const links = document.querySelectorAll('nav > ul > li > a');
 const pages = document.querySelectorAll('.page-container');

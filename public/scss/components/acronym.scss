@@ -15,9 +15,43 @@
     background-color: #6699D4; 
     border-radius: 20px;
 }
+.acronym-container{
+    padding: 30px;
+}
+
+.acronym-container label{
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+
+}
+.acronym-container input{
+    display: block;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    font-size: 16px;
+    width: 100%;
+    padding: 10px;
+}
+.acronym-container button{
+    background-color: white;
+    color: #6699D4;
+    font-size: 20px;
+    padding: 10px 20px;
+    margin: 10px 0px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
 
 #saved { 
     grid-area: saved;
     background-color: #3AA26D;
     border-radius: 20px;
+}
+
+#saved h3 {
+    margin: 20px;
+    color: white;
 }
