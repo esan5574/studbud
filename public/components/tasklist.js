@@ -56,8 +56,6 @@ updateEmpty();
 let item = document.createElement("li");
 item.setAttribute('data-id', task.id);
 item.innerHTML = "<p>" + task.taskDescription + "<br>" + "Due: " + task.completionTime + ", " + task.dueDate + "<br>" + "Time: " + task.estimatedTime + " min" + "<br>" + "Priority: " + task.priorityRating + "</p>";
-
-  // add all the other elements to the item -> duedate, esttime, priority etc
   
 tasklist.appendChild(item);
 //Extra Task DOM elements

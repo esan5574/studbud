@@ -2,15 +2,15 @@ var acc = document.getElementsByClassName("accordion");
 var i;
 
 for (i = 0; i < acc.length; i++) {
-    acc[i].addEventListener("click", function(){
-        this.classList.toggle("p-active");
-        var panel = this.nextElementSibling;
-        if (panel.style.display === "block") {
-            panel.style.display = "none";
-          } else {
-            panel.style.display = "block";
-          }
-        });
+  acc[i].addEventListener("click", function(){
+      this.classList.toggle("p-active");
+      var panel = this.nextElementSibling;
+      if (panel.style.display === "block") {
+          panel.style.display = "none";
+        } else {
+          panel.style.display = "block";
+        }
+      });
 }
 
 //referred to https://dev.to/stackfindover/how-to-create-a-stopwatch-in-javascript-57a8

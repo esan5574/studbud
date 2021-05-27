@@ -1,0 +1,23 @@
+#acronym-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto minmax(1fr,1fr);
+    align-items: start;
+    gap: 20px;
+    grid-template-areas:
+      "acronym"
+      "saved";
+}
+
+  
+#acronym {
+    grid-area: acronym; 
+    background-color: #6699D4; 
+    border-radius: 20px;
+}
+
+#saved { 
+    grid-area: saved;
+    background-color: #3AA26D;
+    border-radius: 20px;
+}
