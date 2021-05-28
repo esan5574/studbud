@@ -16,12 +16,12 @@
     border-radius: 20px;
 }
 .acronym-container{
-    padding: 30px;
+    padding: 20px;
 }
 
 .acronym-container label{
     color: white;
-    font-size: 20px;
+    font-size: 24px;
     font-weight: 600;
 
 }
@@ -55,3 +55,27 @@
     margin: 20px;
     color: white;
 }
+
+#saved li {
+    display: flex;
+    align-items: center;
+    color: white
+}
+
+#saved p{ 
+    padding: 5px 20px;
+    margin: 0px;
+    font-weight:600;
+    font-size: 18px;
+}
+
+#saved button{ 
+    color: #3AA26D;
+    background-color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 5px 10px;
+    font-weight: 600;
+    font-size: 16px;
+}
+

@@ -7,16 +7,17 @@ var wordlist = document.getElementById("wordlist");
 form.addEventListener("submit", function(event){
   event.preventDefault();
   let word = wordInput.value; //add acronym code here
-  let acronym = word.match(/\b(\w)/g).join('').toUpperCase();
-  addWord(acronym, false);
+  let wordAcronym = word.match(/\b(\w)/g).join('').toUpperCase();
+  addWord(wordAcronym, word, false);
 })
 
 var wordListArray = [];
 
-function addWord(wordDescription) {
+function addWord(wordAcronym, wordDescription) {
   
   let word = {
-    wordDescription,
+    wordAcronym,
+    wordDescription
   };
   wordListArray.push(word);
   renderWord(word);
@@ -25,12 +26,12 @@ function addWord(wordDescription) {
 function renderWord(word){
 //Create HTML elements
 let item = document.createElement("li");
-item.innerHTML = "<p>" + word.wordDescription + "</p>";
+item.innerHTML = "<p>" + word.wordAcronym + ": " + word.wordDescription + "</p>";
 
 wordlist.appendChild(item);
 //Extra Task DOM elements
 let delButton = document.createElement("button");
-let delButtonText = document.createTextNode("Delete Acronym");
+let delButtonText = document.createTextNode("DELETE ACRONYM");
 delButton.appendChild(delButtonText);
 item.appendChild(delButton);
 //Event Listeners for DOM addEventListener
