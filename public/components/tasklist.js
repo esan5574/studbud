@@ -1,3 +1,5 @@
+//local storage for kanban
+
 openButton.addEventListener("click", openForm);
 function openForm(){ 
   document.getElementById("myForm").style.display = "block";

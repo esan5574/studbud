@@ -49,10 +49,11 @@
     grid-area: saved;
     background-color: #3AA26D;
     border-radius: 20px;
+    padding: 20px;
 }
 
 #saved h3 {
-    margin: 20px;
+    margin: 0;
     color: white;
 }
 
@@ -63,7 +64,7 @@
 }
 
 #saved p{ 
-    padding: 5px 20px;
+    padding: 5px;
     margin: 0px;
     font-weight:600;
     font-size: 18px;
@@ -74,7 +75,8 @@
     background-color: white;
     border: none;
     border-radius: 10px;
-    padding: 5px 10px;
+    padding: 5px 15px;
+    margin: 0px 10px;
     font-weight: 600;
     font-size: 16px;
 }
