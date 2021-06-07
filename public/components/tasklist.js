@@ -1,4 +1,5 @@
 //local storage for kanban
+document.getElementById("myForm").style.display = "none";
 
 openButton.addEventListener("click", openForm);
 function openForm(){ 
@@ -59,7 +60,7 @@ let item = document.createElement("li");
 item.setAttribute('data-id', task.id);
 item.innerHTML = "<p>" + task.taskDescription + "<br>" + "Due: " + task.completionTime + ", " + task.dueDate + "<br>" + "Time: " + task.estimatedTime + " min" + "<br>" + "Priority: " + task.priorityRating + "</p>";
   
-tasklist.appendChild(item);
+taskaccordion.appendChild(item);
 //Extra Task DOM elements
 let delButton = document.createElement("button");
 let delButtonText = document.createTextNode("Delete Task");

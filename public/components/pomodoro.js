@@ -76,8 +76,6 @@ const time = () => {
 
 	if (seconds === 0) {
 		clearInterval(intervalID);
-		playSound();
-		showMessage();
 	}
 };
 
