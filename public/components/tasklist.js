@@ -58,9 +58,9 @@ updateEmpty();
 //Create HTML elements
 let item = document.createElement("li");
 item.setAttribute('data-id', task.id);
-item.innerHTML = "<p>" + task.taskDescription + "<br>" + "Due: " + task.completionTime + ", " + task.dueDate + "<br>" + "Time: " + task.estimatedTime + " min" + "<br>" + "Priority: " + task.priorityRating + "</p>";
+item.innerHTML = "<p>" + task.taskDescription.bold() + "<br>" + "Due: ".bold() + task.completionTime + ", " + task.dueDate + "<br>" + "Time: ".bold() + task.estimatedTime + " min" + "<br>" + "Priority: ".bold() + task.priorityRating + "</p>";
   
-taskaccordion.appendChild(item);
+taskscroll.appendChild(item);
 //Extra Task DOM elements
 let delButton = document.createElement("button");
 let delButtonText = document.createTextNode("Delete Task");
