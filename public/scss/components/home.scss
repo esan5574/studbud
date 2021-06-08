@@ -83,8 +83,18 @@
     height: 230px;  
     border: none;
     border-radius: 20px;
-}
+}  
 
+@media screen and (max-width: 800px) {
+    #home-grid {
+      grid-template-areas:
+      "tasklist"
+      "stopwatch"
+      "pomodoro"
+      "music";
+    }
+
+}
 
 
   
