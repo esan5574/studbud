@@ -7,12 +7,13 @@
 	<title>repl.it</title>
 	<link href="scss/main.scss" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body class="app-container">
     <nav class="side-nav">
         <ul class="nav-links">
-            <li class="nav-item"><a href=#home class="active"><i class="material-icons" style="font-size:40px;">home</i></a></li>
+            <li class="nav-item"><a href=#home class="nav-active"><i class="material-icons" style="font-size:40px;">home</i></a></li>
             <li class="nav-item"><a href=#myboard> <i class="material-icons" style="font-size:40px;">dashboard</i></a></li>
             <li class="nav-item" style="font-size: 30px;"><a href=#acronymmaker>A</a></li>
         </ul>
@@ -91,7 +92,25 @@
 
     <div id="myboard" class="page-container">
         <h1>MY BOARD<button id="addButton">+</button></h1>
+        <div class="add-popup" id=addForm>
+            <form id="columnform" class="add-container">
+                <h3>ADD COLUMN<button type="button" id="btnClose">x</button></h3>
+                <label for="column">Add Column:</label>
+                <input type="text" name="column" autocomplete="off" id="columnInput">
+                <button type="submit" class="submit">ADD COLUMN</button>    
+            </form>
+        </div>
+
+        <div id="theboards">
+            <div id="toDoList">
+                <h3>TO DO</h3>
+            </div>
+            <div id="newColumn">
+                <div id="emptyList"></div>
+            </div>
+        </div> 
     </div>
+
 
     <div id="acronymmaker" class="page-container">
         <h1>ACRONYM MAKER</h1>

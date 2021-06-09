@@ -61,10 +61,15 @@ item.setAttribute('data-id', task.id);
 item.innerHTML = "<p>" + task.taskDescription.bold() + "<br>" + "Due: ".bold() + task.completionTime + ", " + task.dueDate + "<br>" + "Time: ".bold() + task.estimatedTime + " min" + "<br>" + "Priority: ".bold() + task.priorityRating + "</p>";
   
 taskscroll.appendChild(item);
+
+//meatball menu that stores edit and delete task (MAY NOT USE)
+/*let menuButton = document.createElement("button");
+menuButton.classList.add("fa", "fa-ellipsis-h", "fa-6");
+item.appendChild(menuButton);*/
+
 //Extra Task DOM elements
 let delButton = document.createElement("button");
-let delButtonText = document.createTextNode("Delete Task");
-delButton.appendChild(delButtonText);
+delButton.classList.add("fa", "fa-trash");
 item.appendChild(delButton);
   //Event Listeners for DOM addEventListener
 delButton.addEventListener("click", function(event){
@@ -76,8 +81,8 @@ delButton.addEventListener("click", function(event){
     updateEmpty();
     item.remove();
 })
-  
-//Clear the input form
+
+//Clear the input form*/
 form.reset();
 }
 

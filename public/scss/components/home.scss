@@ -35,12 +35,24 @@
 }
 
 #tasklist li {
-    list-style: none; 
+    list-style: none;
+    background: #dedede;
+    border-radius: 20px;
+    margin: 16px; 
+    display: flex;
+    align-items: flex-end;
 }
 
 #tasklist li button {
-    margin: 10px 20px;
-}
+    margin: 10px;
+    position: sticky;
+    left: 435px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-size: 23px;
+    color: gray;
+} 
 
 #openButton {
     background-color: white;

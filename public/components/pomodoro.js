@@ -28,7 +28,6 @@ const startTimer = mins => {
 const breakTimer = mins => {
 	resetTime();
 	clearInterval(intervalID);
-
 	if (!active) {
 		timer.textContent = "5:00";
 		seconds = mins * 60 || 0;
@@ -42,7 +41,6 @@ const breakTimer = mins => {
 const breakTimer2 = mins => {
 	resetTime();
 	clearInterval(intervalID);
-
 	if (!active) {
 		timer.textContent = "15:00";
 		seconds = mins * 60 || 0;
@@ -67,13 +65,11 @@ const time = () => {
 	seconds--;
 	minutes = Math.floor(seconds / 60);
 	sec = seconds % 60;
-
 	if (sec < 10) {
 		sec = `0${sec}`;
 	}
 
 	timer.textContent = `${minutes}:${sec}`;
-
 	if (seconds === 0) {
 		clearInterval(intervalID);
 	}
