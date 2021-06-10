@@ -12,13 +12,13 @@ function closeForm(){
   document.getElementById("addForm").style.display = "none";
 }
 
-const form = document.getElementById("addForm");
+const columnForm = document.getElementById("addForm");
 const button = document.querySelector("#addForm > button");
 var columnInput = document.getElementById("columnInput");
 var columnlist = document.getElementById("columnlist");
 
   
-form.addEventListener("submit", function(event){
+columnForm.addEventListener("submit", function(event){
     event.preventDefault();
     let column = columnInput.value;
   
@@ -42,7 +42,7 @@ updateEmpty();
 //Create HTML elements
 let item = document.createElement("li");
 item.setAttribute('data-id', column.id);
-item.innerHTML = "<p>" + column.columnDescription.bold() + "</p>";
+item.innerHTML = "<h3>" + column.columnDescription + "</h3>";
   
 newColumn.appendChild(item);
 
@@ -52,7 +52,7 @@ menuButton.classList.add("fa", "fa-ellipsis-h", "fa-6");
 item.appendChild(menuButton);*/
 
 //Extra Task DOM elements REMOVE THIS FOR NOW
-/*let delButton = document.createElement("button");
+let delButton = document.createElement("button");
 delButton.classList.add("fa", "fa-trash");
 item.appendChild(delButton);
   //Event Listeners for DOM addEventListener
@@ -64,10 +64,10 @@ delButton.addEventListener("click", function(event){
     console.log(columnListArray);
     updateEmpty();
     item.remove();
-})*/
+})
 
 //Clear the input form*/
-form.reset();
+columnForm.reset();
 }
 
 function removeItemFromArray(arr, index) {

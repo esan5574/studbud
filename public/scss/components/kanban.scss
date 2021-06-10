@@ -21,11 +21,6 @@
     margin: 0px 10px;
 }
 
-#toDoList h3{
-    margin: 0px;
-    padding: 20px;
-    color: white; 
-}
 #btnClose{
   position: absolute;
   right: 10px;
@@ -86,8 +81,18 @@
   border-radius: 20px;
   width: 350px;
   margin: 0px 10px;
+  display: flex;
+  align-items: center;
+}
+
+#theboards h3{
+  margin: 0px;
+  padding: 20px;
+  color: white; 
 }
 
 #newColumn {
   display: flex;
 }
+
+
