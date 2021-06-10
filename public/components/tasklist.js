@@ -62,11 +62,6 @@ item.innerHTML = "<p>" + task.taskDescription.bold() + "<br>" + "Due: ".bold() +
   
 taskscroll.appendChild(item);
 
-//meatball menu that stores edit and delete task (MAY NOT USE)
-/*let menuButton = document.createElement("button");
-menuButton.classList.add("fa", "fa-ellipsis-h", "fa-6");
-item.appendChild(menuButton);*/
-
 //Extra Task DOM elements
 let delButton = document.createElement("button");
 delButton.classList.add("fa", "fa-trash");

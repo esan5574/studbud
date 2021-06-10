@@ -1,13 +1,20 @@
-
-@import "reset.scss";
-@import "typography.scss";
+@import "reset";
+@import "layout";
+@import "typography";
 @import "components/home";
 @import "components/navigation";
 @import "components/taskform";
 @import "components/pomodoro";
 @import "components/stopwatch";
 @import "components/kanban";
-@import "components/acronym";
- 
+@import "components/acronym"; 
+
+
+
+
+
+
+
+
 
 

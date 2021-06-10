@@ -26,13 +26,12 @@ function addWord(wordAcronym, wordDescription) {
 function renderWord(word){
 //Create HTML elements
 let item = document.createElement("li");
-item.innerHTML = "<p>" + word.wordAcronym + ": " + word.wordDescription + "</p>";
+item.innerHTML = "<p>" + word.wordAcronym.bold() + ": " + word.wordDescription + "</p>";
 
 wordlist.appendChild(item);
 //Extra Task DOM elements
 let delButton = document.createElement("button");
-let delButtonText = document.createTextNode("DELETE ACRONYM");
-delButton.appendChild(delButtonText);
+delButton.classList.add("fa", "fa-trash");
 item.appendChild(delButton);
 //Event Listeners for DOM addEventListener
 delButton.addEventListener("click", function(event){

@@ -63,10 +63,14 @@
 }
 
 #saved p{ 
-    padding: 5px;
-    margin: 0px;
-    font-weight:600;
+    border-radius: 15px;
+    padding: 5px 20px;
+    margin: 5px;
+    font-weight: 600;
     font-size: 18px;
+    color: #3AA26D;
+    background: white;
+    width: 100%;
 }
 
 #saved button{ 
@@ -76,7 +80,17 @@
     border-radius: 10px;
     padding: 5px 15px;
     margin: 0px 10px;
-    font-weight: 600;
-    font-size: 16px;
+    font-size: 20px;
 }
 
+@media screen and (max-width: 800px) {
+    #saved li{
+        display: grid;
+        margin: 15px 0px;
+    }
+    #saved button{
+        width: 100%;
+        margin: 5px;
+    }
+    
+}

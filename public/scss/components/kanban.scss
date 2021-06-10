@@ -1,24 +1,24 @@
 #myboard h1{
-    display: inline-flex;
-    align-items: center;
+  display: inline-flex;
+  align-items: center;
 }
 #addButton {
-    background-color: #6699D4;
-    font-size: 30px;
-    color: white;
-    height: 40px;
-    width: 40px;
-    border: none;
-    border-radius: 20%;
-    cursor: pointer;
-    margin: 15px;
+  background-color: #6699D4;
+  font-size: 30px;
+  color: white;
+  height: 40px;
+  width: 40px;
+  border: none;
+  border-radius: 20%;
+  cursor: pointer;
+  margin: 15px;
 }
 
 #toDoList {
-    background: #6699D4;
-    border-radius: 20px;
-    width: 350px;
-    margin: 0px 10px;
+  background: #6699D4;
+  border-radius: 20px;
+  width: 350px;
+  margin: 0px 10px;
 }
 
 #btnClose{
@@ -44,7 +44,9 @@
   border-radius: 20px;
 }
 .add-container h3{
-  margin: 5px 0px 5px 0px;
+  margin: 5px 40px 5px 0px;
+  display: flex;
+  align-items: baseline;
 }
 
 .add-container input {
@@ -72,9 +74,11 @@
   margin-right: auto;
   cursor: pointer;
 }
+
 #theboards {
   display: flex;
 }
+
 #theboards li{
   list-style-type: none;
   background: #6699D4;
@@ -83,16 +87,26 @@
   margin: 0px 10px;
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 
 #theboards h3{
   margin: 0px;
   padding: 20px;
   color: white; 
+  text-transform: uppercase;
 }
 
 #newColumn {
   display: flex;
 }
 
+#newColumn li button{
+  color: white;
+  margin: 10px;
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
 

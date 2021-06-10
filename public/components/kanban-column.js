@@ -1,7 +1,6 @@
 //local storage for kanban
 document.getElementById("addForm").style.display = "none";
 
-
 addButton.addEventListener("click", openForm);
 function openForm(){ 
   document.getElementById("addForm").style.display = "block";
@@ -12,13 +11,12 @@ function closeForm(){
   document.getElementById("addForm").style.display = "none";
 }
 
-const columnForm = document.getElementById("addForm");
-const button = document.querySelector("#addForm > button");
+const form = document.getElementById("columnForm");
+const button = document.querySelector("#columnForm > button");
 var columnInput = document.getElementById("columnInput");
 var columnlist = document.getElementById("columnlist");
-
   
-columnForm.addEventListener("submit", function(event){
+form.addEventListener("submit", function(event){
     event.preventDefault();
     let column = columnInput.value;
   
@@ -67,7 +65,7 @@ delButton.addEventListener("click", function(event){
 })
 
 //Clear the input form*/
-columnForm.reset();
+form.reset();
 }
 
 function removeItemFromArray(arr, index) {
@@ -79,10 +77,9 @@ function removeItemFromArray(arr, index) {
 
 function updateEmpty() {
   if (columnListArray.length > 0){
-    document.getElementById('emptyList').style.display = 'none';
+    document.getElementById('emptyColumn').style.display = 'none';
   } else {
-    document.getElementById('emptyList').style.display = 'block';
+    document.getElementById('emptyColumn').style.display = 'block';
   }
 }
-
              

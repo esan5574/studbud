@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
-	<title>repl.it</title>
+	<title>StudBud</title>
 	<link href="scss/main.scss" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -95,7 +95,7 @@
         <div class="add-popup" id=addForm>
             <form id="columnForm" class="add-container">
                 <h3>ADD COLUMN<button type="button" id="btnClose">x</button></h3>
-                <label for="column">Add Column:</label>
+                <label for="column">Title:</label>
                 <input type="text" name="column" autocomplete="off" id="columnInput">
                 <button type="submit" class="submit">ADD COLUMN</button>    
             </form>
@@ -106,7 +106,7 @@
                 <h3>TO DO</h3>
             </div>
             <div id="newColumn">
-                <div id="emptyList"></div>
+                <div id="emptyColumn"></div>
             </div>
         </div> 
     </div>
@@ -120,7 +120,7 @@
                     <label for="word">WORDS TO ACRONYMISE</label>
                     <input type="text" name="word" autocomplete="off" id="wordInput">
                     <button type="submit">GENERATE ACRONYM</button>
-                  </form>
+                </form>
             </div>
             <div id="saved">
                 <h3>MY ACRONYMS</h3>
