@@ -1,0 +1,9 @@
+const dragEvent = p =>{
+    p.addEventListener('dragstart', ()=>{
+         p.classList.add('dragging')
+    })
+    p.addEventListener('dragend', ()=>{
+         p.classList.remove('dragging')
+         handleMovement(p) 
+    })
+}

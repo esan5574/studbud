@@ -1,0 +1,441 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css?family=Merriweather:400,700");
+.app-container {
+  background-color: white;
+  width: 100%;
+  min-height: 100%;
+}
+.page-container {
+  margin: 2em 10em;
+}
+.page-container#home {
+  text-align: left;
+}
+.page-container:not(#home) {
+  display: none;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-size: 100%;
+}
+/*16px*/
+body {
+  background: white;
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+  line-height: 1.75;
+  color: #000000;
+}
+p {
+  margin-bottom: 1rem;
+}
+h1, h2, h3, h4, h5 {
+  margin: 3rem 0 1.38rem;
+  font-family: "Gill Sans";
+  font-weight: 700;
+  line-height: 1.3;
+}
+h1 {
+  margin-top: 0;
+  font-size: 3.052rem;
+}
+h2 {
+  font-size: 2.441rem;
+}
+h3 {
+  font-size: 1.953rem;
+}
+h4 {
+  font-size: 1.563rem;
+}
+h5 {
+  font-size: 1.25rem;
+}
+small, .text_small {
+  font-size: 0.8rem;
+}
+* {
+  box-sizing: border-box;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+#home-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto minmax(1fr 1fr 1fr);
+  align-items: start;
+  gap: 10px 40px;
+  grid-template-areas: "tasklist stopwatch" "tasklist pomodoro" "tasklist music";
+}
+#home h1 {
+  margin-bottom: 5px;
+}
+#tasklist {
+  grid-area: tasklist;
+  background-color: #6699D4;
+  border-radius: 20px;
+}
+#tasklist h3 {
+  margin: 20px;
+  color: white;
+  display: inline-flex;
+  align-items: center;
+}
+#tasklist p {
+  padding: 5px 20px;
+  margin: 0px;
+}
+#tasklist li {
+  list-style: none;
+}
+#tasklist li button {
+  margin: 10px 20px;
+}
+#openButton {
+  background-color: white;
+  font-size: 20px;
+  color: #6699D4;
+  height: 30px;
+  width: 30px;
+  border: none;
+  border-radius: 20%;
+  cursor: pointer;
+  margin: 10px;
+}
+#taskscroll {
+  margin: 0px 20px 20px;
+  border-radius: 20px;
+  background-color: white;
+  width: 500px;
+  height: 420px;
+  overflow: scroll;
+}
+#stopwatch {
+  grid-area: stopwatch;
+  background-color: #DEDEDE;
+  border-radius: 20px;
+}
+#pomodoro {
+  grid-area: pomodoro;
+  background-color: #3AA26D;
+  border-radius: 20px;
+}
+#music {
+  grid-area: music;
+}
+#music iframe {
+  width: 550px;
+  height: 230px;
+  border: none;
+  border-radius: 20px;
+}
+@media screen and (max-width: 600px) {
+  #tasklist {
+    width: 100%;
+  }
+
+  #stopwatch {
+    width: 100%;
+  }
+
+  #pomodoro {
+    width: 100%;
+  }
+
+  #music {
+    width: 100%;
+  }
+}
+.side-nav {
+  width: 100px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  align-items: center;
+  left: 0;
+  top: 0;
+  background-color: #F5F5F5;
+  justify-content: space-around;
+}
+.nav-links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  padding: 5em 0em 30em 0em;
+}
+.nav-item a {
+  display: block;
+  padding: 0.5em;
+  text-decoration: none;
+  color: #CACED2;
+}
+.nav-item a:hover {
+  background-color: #C6F1DB;
+  border-radius: 0.5em;
+  color: #3AA26D;
+}
+.nav-item a.nav-active {
+  color: #3AA26D;
+}
+@media screen and (max-width: 600px) {
+  .side-nav.nav-links {
+    flex-direction: row;
+    width: 100vw;
+    height: 5rem;
+    bottom: 0;
+    justify-content: space-around;
+  }
+}
+#btnCancel {
+  position: absolute;
+  right: 10px;
+  height: 30px;
+  width: 30px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.form-popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+.form-container {
+  max-width: 300px;
+  padding: 10px;
+  background-color: #DEDEDE;
+  border-radius: 20px;
+}
+.form-container h3 {
+  margin: 5px 0px 5px 0px;
+}
+.form-container input {
+  border: none;
+  border-radius: 5px;
+  margin: 2px;
+  outline: none;
+  padding: 2px;
+}
+.form-container select {
+  border: none;
+  border-radius: 5px;
+  margin: 2px;
+  outline: none;
+  padding: 2px;
+}
+.form-container .submit {
+  background-color: white;
+  border-radius: 10px;
+  border: none;
+  padding: 10px 40px;
+  margin: 10px 10px 0px 10px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  cursor: pointer;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  width: 100%;
+  min-height: 100vh;
+  background-color: #3AA26D;
+}
+#pomodoro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+#pomodoro .pt-time {
+  font-size: 50px;
+  color: #fff;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 0px;
+}
+#pomodoro .pt-buttons {
+  display: flex;
+  justify-content: center;
+}
+#pomodoro .pt-buttons button {
+  color: black;
+  background-color: white;
+  border-radius: 20px;
+  border: none;
+  font-size: 16px;
+  margin: 10px 5px 10px;
+  padding: 10px 40px 10px 40px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+#pomodoro .pt-buttons button:hover {
+  color: #3AA26D;
+}
+#pomodoro .options {
+  margin-top: 10px;
+}
+#pomodoro .options button {
+  margin: 0 5px;
+  padding: 10px 20px;
+  border: 1px solid #fff;
+  background: none;
+  color: #fff;
+  border-radius: 20px;
+  font-weight: 600;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+#pomodoro .options button:hover {
+  background-color: white;
+  color: #3AA26D;
+}
+.accordion {
+  background-color: #DEDEDE;
+  color: black;
+  cursor: pointer;
+  padding: 12px 15px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 20px;
+  font-weight: 600;
+  transition: 0.4s;
+  border-radius: 20px;
+}
+.accordion:after {
+  content: "+";
+  color: #777;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+.p-active:after {
+  content: "−";
+}
+.panel {
+  padding: 10px;
+  background-color: #DEDEDE;
+  border-radius: 0px 0px 20px 20px;
+  display: none;
+}
+#a-stopwatch {
+  font-size: 50px;
+  color: black;
+  text-align: center;
+  margin: 0;
+}
+#t-buttons {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#t-buttons button {
+  background-color: white;
+  border: none;
+  border-radius: 20px;
+  display: block;
+  font-size: 16px;
+  text-transform: uppercase;
+  padding: 10px 40px 10px 40px;
+  margin: 10px 5px 10px;
+  cursor: pointer;
+}
+#t-buttons button:hover {
+  color: #6699D4;
+}
+#myboard h1 {
+  display: inline-flex;
+  align-items: center;
+}
+#addButton {
+  background-color: #6699D4;
+  font-size: 30px;
+  color: white;
+  height: 40px;
+  width: 40px;
+  border: none;
+  border-radius: 20%;
+  cursor: pointer;
+  margin: 15px;
+}
+#acronym-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto minmax(1fr, 1fr);
+  align-items: start;
+  gap: 20px;
+  grid-template-areas: "acronym" "saved";
+}
+#acronym {
+  grid-area: acronym;
+  background-color: #6699D4;
+  border-radius: 20px;
+}
+.acronym-container {
+  padding: 20px;
+}
+.acronym-container label {
+  color: white;
+  font-size: 24px;
+  font-weight: 600;
+}
+.acronym-container input {
+  display: block;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  font-size: 16px;
+  width: 100%;
+  padding: 10px;
+}
+.acronym-container button {
+  background-color: white;
+  color: #6699D4;
+  font-size: 20px;
+  padding: 10px 20px;
+  margin: 10px 0px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+#saved {
+  grid-area: saved;
+  background-color: #3AA26D;
+  border-radius: 20px;
+  padding: 20px;
+}
+#saved h3 {
+  margin: 0;
+  color: white;
+}
+#saved li {
+  display: flex;
+  align-items: center;
+  color: white;
+}
+#saved p {
+  padding: 5px;
+  margin: 0px;
+  font-weight: 600;
+  font-size: 18px;
+}
+#saved button {
+  color: #3AA26D;
+  background-color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 5px 15px;
+  margin: 0px 10px;
+  font-weight: 600;
+  font-size: 16px;
+}
+/*# sourceMappingURL=index.HASH_REF_80038805bd6829e42a01d0f20c72b7db.css.map */

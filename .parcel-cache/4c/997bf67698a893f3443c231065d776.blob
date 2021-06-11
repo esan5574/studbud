@@ -1,0 +1,13 @@
+document.getElementById("kanbanForm").style.display = "none";
+
+addBtn.addEventListener("click", openForm);
+function openForm(){ 
+  document.getElementById("kanbanForm").style.display = "block";
+}
+
+btnCancel.addEventListener("click", closeForm);
+function closeForm(){ 
+  document.getElementById("kanbanForm").style.display = "none";
+}
+
+

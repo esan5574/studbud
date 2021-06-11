@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>repl.it</title>
+	<link href="ac2b17b88ef0ab3e3e3316d5a6be3892" rel="stylesheet" type="text/css">
+    <link href="11ab900629912824b8828704e5f5d442" rel="stylesheet">
+</head>
+
+<body class="app-container">
+    <nav class="top-nav">
+        <ul class="nav-links">
+            <li class="nav-item"><a href="#home" class="active"><i class="material-icons">home</i></a></li>
+            <li class="nav-item"><a href="#page1"> <i class="material-icons">dashboard</i></a></li>
+            <li class="nav-item"><a href="#page2"></a></li>
+        </ul>
+    </nav>
+
+    <div id="home" class="page-container">
+        <h1>Hello World Wide Web</h1>
+	    <p>This time with <a href="a72065957fe902f40f1ba688f0450f00">Express</a> + <a href="8d8dc26c6986d8d40d8f3b9fe89723c6">Parcel</a> + <a href="8e6645975e6ba0cb20bed489a75ac873">SASS (SCSS)</a>!</p>
+    </div>
+
+    <div id="page1" class="page-container">
+        <h1>Page 1</h1>
+    </div>
+
+    <div id="page2" class="page-container">
+        <h1>Page 2</h1>
+    </div>
+	
+	<script src="4e6340146f7d0152c44dbd6ccf58b0e0" data-parcel-key="893f0ac199c9f3c582a9a8f634ca9744">
+	</script>
+</body>
+
+</html>

@@ -1,0 +1,24 @@
+
+
+//Clear the input form*/
+form.reset();
+}
+
+
+function removeItemFromArray(arr, index) {
+  if (index > -1){
+    arr.splice(index, 1)
+  }
+  return arr;
+}
+
+function updateEmpty() {
+  if (kanbanListArray.length > 0){
+    document.getElementById('emptyKanban').style.display = 'none';
+  } else {
+    document.getElementById('emptyKanban').style.display = 'block';
+  }
+}
+
+
+

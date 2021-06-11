@@ -1,0 +1,10 @@
+class Navigation {
+    constructor(links, pages) {
+        this.links = links;
+        this.pages = pages;
+        this.currentPage = null;
+    }
+    getLinks() {
+        console.log(this.links);
+    }
+}

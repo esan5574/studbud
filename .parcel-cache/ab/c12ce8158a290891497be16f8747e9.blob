@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+    <meta name="description" content="Study management application for Nursing Students">
+    <meta name="author" content="Elsa San">
+	<meta name="viewport" content="width=device-width">
+	<title>StudBud</title>
+    <link rel="shortcut icon" type="image/jpg" href="ad30922d83603f35d960b435176e53bc">
+	<link href="ac2b17b88ef0ab3e3e3316d5a6be3892" rel="stylesheet" type="text/css">
+    <link href="11ab900629912824b8828704e5f5d442" rel="stylesheet">
+    <link rel="stylesheet" href="b3be268a3f758d3eb3373190ce78abab">
+</head>
+
+<body class="app-container">
+    <nav class="side-nav">
+        <ul class="nav-links">
+            <li class="nav-item"><a href="#home" class="nav-active"><i class="material-icons" style="636152ca4ada1cf6533c5d1158b10647">home</i></a></li>
+            <li class="nav-item"><a href="#myboard"> <i class="material-icons" style="be3d0d46f6e5e4b329c1905656c914c6">dashboard</i></a></li>
+            <li class="nav-item" style="9f64e19ef9aa6519d0ee445b62bc5c85"><a href="#acronymmaker">A</a></li>
+        </ul>
+    </nav>
+    <div id="home" class="page-container">
+        <h1>HOME</h1>
+        <div id="home-grid">
+            <!-- comment -->
+            <div class="form-popup" id="myForm">
+                <form id="taskform" class="form-container">
+                    <h3>ADD TASK<button type="button" id="btnCancel">x</button></h3>
+                    <label for="task">Task:</label>
+                    <input type="text" name="task" autocomplete="off" id="taskInput">
+                    <br>
+                    <label for="completionTime">Due:</label>
+                    <input type="time" name="completionTime" id="completionTimeInput">
+                    <label for="dueDate">,</label>
+                    <input type="date" name="dueDate" id="dueDateInput">
+                    <br>
+                    <label for="estimatedTime">Time:</label>
+                    <input type="number" name="estimatedTime" id="estimatedTimeInput">
+                    <br>
+                    <label for="priority">Task Priority:</label>
+                    <select name="priority" id="priorityInput">
+                        <option vale="">Select one</option>
+                        <option value="Low">Low</option>
+                        <option value="Medium">Medium</option>
+                        <option value="High">High</option>
+                    </select>
+                    <button type="submit" id="submit">ADD TASK</button>    
+                </form>
+            </div>
+
+            <div id="tasklist">
+                <h3>TASK LIST<button id="openButton">+</button></h3>
+                <div id="taskscroll"> <!--Changed to a scroll list instead of accordion (a simpler solution coding wise)-->
+                    <p id="emptyList">You have not added any task yet.</p>
+                </div>
+            </div>
+            
+            <div id="stopwatch">
+                <button class="accordion">STOPWATCH</button> <!--changed stopwatch to be in an accordion instead as it wasn't a feature needed as much by my personas(a pomodoro timer was more ideal)-->
+                <div class="panel">
+                    <div id="a-stopwatch">00:00:00</div>
+                    <ul id="t-buttons">
+                        <li><button id="start">Start</button></li>
+                        <li><button id="pause">Stop</button></li>
+                        <li><button id="reset">Reset</button></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div id="pomodoro">
+                <div class="p-timer">
+                    <div class="pt-clock">
+                      <div class="options">
+                        <button class="options-work">Work</button>
+                        <button class="options-break">Short Break</button> <!-- user has option to pick between a short break or longer break-->
+                        <button class="options-break2">Long Break</button>         
+                      </div>
+                      <p class="pt-time">25:00</p>
+                      <div class="pt-buttons">
+                        <button class="pt-start">Start</button>
+                        <button class="pt-stop">Stop</button>
+                        <button class="pt-reset">Reset</button>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="music">
+               <iframe src="62d052c5d0d27deb531261b1bc80907f" allowtransparency="true" allow="encrypted-media"></iframe>
+            </div>
+        </div>
+    </div>
+
+    <div id="myboard" class="page-container"> <!--did not get to implement-->
+        <h1>MY BOARD<button id="addButton">+</button></h1>
+        <div class="add-popup" id="addForm">
+            <form id="columnForm" class="add-container">
+                <h3>ADD COLUMN<button type="button" id="btnClose">x</button></h3>
+                <label for="column">Title:</label>
+                <input type="text" name="column" autocomplete="off" id="columnInput">
+                <button type="submit" class="submit">ADD COLUMN</button>    
+            </form>
+        </div>
+
+        <div id="theboards">
+            <div id="toDoList">
+                <h3>TO DO<button id="openBtn">+</button></h3>
+                <div id="k-task">Drag and drop tasks</div>
+            </div>
+            <div id="newColumn">
+                <div id="emptyColumn"></div>
+            </div>
+        </div> 
+    </div>
+
+
+    <div id="acronymmaker" class="page-container">
+        <h1>ACRONYM MAKER</h1> <!--did not implement the additional options(length of acronym etc) I originally had as it extended the acronym making process"
+            /after clarifying how to make the acronyms mneumonic I decided not to include the 'make it mneumonic' function as it wasn't needed-->
+        <div id="acronym-grid">
+            <div id="acronym">
+                <form id="acronymform" class="acronym-container">
+                    <label for="word">WORDS TO ACRONYMISE</label>
+                    <input type="text" name="word" autocomplete="off" id="wordInput">
+                    <button type="submit">GENERATE ACRONYM</button> <!--generated acronyms will immediately be saved in 'my acronyms' where users will have option to delete-->
+                </form>
+            </div>
+            <div id="saved">
+                <h3>MY ACRONYMS</h3>
+                <p id="emptyAcronym">You have not saved any acronyms yet.</p>
+                <ul id="wordlist"></ul>
+            </div>
+        </div>
+    </div>
+	
+	<script src="4e6340146f7d0152c44dbd6ccf58b0e0" data-parcel-key="9af26f32296c7bd2e424308ce2378dbd">
+	</script>
+</body>
+
+</html>

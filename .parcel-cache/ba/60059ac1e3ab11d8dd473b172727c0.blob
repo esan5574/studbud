@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>repl.it</title>
+	<link href="3726c2e58e14a34ff58a760d13283737" rel="stylesheet" type="text/css">
+    <link href="96b99093710fd6da7b167bf5daed9ec9" rel="stylesheet">
+    <link rel="stylesheet" href="90710941ef62ba6b47e950a43f4d0592">
+</head>
+
+<body class="app-container">
+    <nav class="side-nav">
+        <ul class="nav-links">
+            <li class="nav-item"><a href="#home" class="nav-active"><i class="material-icons" style="864e525aac85c0f54ca17495bad2a482">home</i></a></li>
+            <li class="nav-item"><a href="#myboard"> <i class="material-icons" style="db3f0e56ab3486e06386121ad9ee1f48">dashboard</i></a></li>
+            <li class="nav-item" style="048d201fb74731cc568a5374a667a072"><a href="#acronymmaker">A</a></li>
+        </ul>
+    </nav>
+    <div id="home" class="page-container">
+        <h1>HOME</h1>
+        <div id="home-grid">
+            <!-- comment -->
+            <div class="form-popup" id="myForm">
+                <form id="taskform" class="form-container">
+                    <h3>ADD TASK<button type="button" id="btnCancel">x</button></h3>
+                    <label for="task">Task:</label>
+                    <input type="text" name="task" autocomplete="off" id="taskInput">
+                    <br>
+                    <label for="completionTime">Due:</label>
+                    <input type="time" name="completionTime" id="completionTimeInput">
+                    <label for="dueDate">,</label>
+                    <input type="date" name="dueDate" id="dueDateInput">
+                    <br>
+                    <label for="estimatedTime">Time:</label>
+                    <input type="number" name="estimatedTime" id="estimatedTimeInput">
+                    <br>
+                    <label for="priority">Task Priority:</label>
+                    <select name="priority" id="priorityInput">
+                        <option vale="">Select one</option>
+                        <option value="Low">Low</option>
+                        <option value="Medium">Medium</option>
+                        <option value="High">High</option>
+                    </select>
+                    <button type="submit" class="submit">ADD TASK</button>    
+                </form>
+            </div>
+
+            <div id="tasklist">
+                <h3>TASK LIST<button id="openButton">+</button></h3>
+                <div id="taskscroll"> <!--Changed to a scroll list instead of accordion (a simpler solution coding wise)-->
+                    <p id="emptyList">You have not added any task yet.</p>
+                </div>
+            </div>
+            
+            <div id="stopwatch">
+                <button class="accordion">STOPWATCH</button> <!--changed stopwatch to be in an accordion instead as it wasn't a feature needed as much by my personas(a pomodoro timer was more ideal)-->
+                <div class="panel">
+                    <div id="a-stopwatch">00:00:00</div>
+                    <ul id="t-buttons">
+                        <li><button id="start">Start</button></li>
+                        <li><button id="pause">Stop</button></li>
+                        <li><button id="reset">Reset</button></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div id="pomodoro">
+                <div class="p-timer">
+                    <div class="pt-clock">
+                      <div class="options">
+                        <button class="options-work">Work</button>
+                        <button class="options-break">Short Break</button>
+                        <button class="options-break2">Long Break</button>         
+                      </div>
+                      <p class="pt-time">25:00</p>
+                      <div class="pt-buttons">
+                        <button class="pt-start">Start</button>
+                        <button class="pt-stop">Stop</button>
+                        <button class="pt-reset">Reset</button>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="music">
+               <iframe src="bdcfa31a257b03d225113409f02a1afc" allowtransparency="true" allow="encrypted-media"></iframe>
+            </div>
+        </div>
+    </div>
+
+    <div id="myboard" class="page-container">
+        <h1>MY BOARD<button id="addButton">+</button></h1>
+        <div class="add-popup" id="addForm">
+            <form id="columnForm" class="add-container">
+                <h3>ADD COLUMN<button type="button" id="btnClose">x</button></h3>
+                <label for="column">Add Column:</label>
+                <input type="text" name="column" autocomplete="off" id="columnInput">
+                <button type="submit" class="submit">ADD COLUMN</button>    
+            </form>
+        </div>
+
+        <div id="theboards">
+            <div id="toDoList">
+                <h3>TO DO</h3>
+            </div>
+            <div id="newColumn">
+                <div id="emptyList"></div>
+            </div>
+        </div> 
+    </div>
+
+
+    <div id="acronymmaker" class="page-container">
+        <h1>ACRONYM MAKER</h1>
+        <div id="acronym-grid">
+            <div id="acronym">
+                <form id="acronymform" class="acronym-container">
+                    <label for="word">WORDS TO ACRONYMISE</label>
+                    <input type="text" name="word" autocomplete="off" id="wordInput">
+                    <button type="submit">GENERATE ACRONYM</button>
+                  </form>
+            </div>
+            <div id="saved">
+                <h3>MY ACRONYMS</h3>
+                <ul id="wordlist"></ul>
+            </div>
+        </div>
+    </div>
+	
+	<script src="1a606c1073155c9f135f542a1c44c524" data-parcel-key="8973195b93d1f775d35a835ff1972e70">
+	</script>
+</body>
+
+</html>

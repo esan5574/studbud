@@ -1,0 +1,9 @@
+document.getElementById("kanbanForm").style.display = "none";
+
+addBtn.addEventListener("click", openForm);
+function openForm(){ 
+  document.getElementById("kanbanForm").style.display = "block";
+}
+
+
+

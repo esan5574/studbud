@@ -1,0 +1,28 @@
+document.getElementById("kanbanForm").style.display = "none";
+
+addBtn.addEventListener("click", openForm);
+function openForm(){ 
+  document.getElementById("kanbanForm").style.display = "block";
+}
+
+<label for="task">Task:</label>
+                    <input type="text" name="task" autocomplete="off" id="taskInput">
+                    <br>
+                    <label for="completionTime">Due:</label>
+                    <input type="time" name="completionTime" id="completionTimeInput">
+                    <label for="dueDate">,</label>
+                    <input type="date" name="dueDate" id="dueDateInput">
+                    <br>
+                    <label for="estimatedTime">Time:</label>
+                    <input type="number" name="estimatedTime" id="estimatedTimeInput">
+                    <br>
+                    <label for="priority">Task Priority:</label>
+                    <select name="priority" id="priorityInput">
+                        <option vale="">Select one</option>
+                        <option value="Low">Low</option>
+                        <option value="Medium">Medium</option>
+                        <option value="High">High</option>
+                    </select>
+                    <button type="submit" id="submit">ADD TASK</button>
+
+

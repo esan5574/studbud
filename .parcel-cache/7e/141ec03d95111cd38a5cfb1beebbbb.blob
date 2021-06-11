@@ -1,0 +1,107 @@
+document.getElementById("kanbanForm").style.display = "none";
+
+addBtn.addEventListener("click", openForm);
+function openForm(){ 
+  document.getElementById("kanbanForm").style.display = "block";
+}
+
+closeBtn.addEventListener("click", closeForm);
+function closeForm(){ 
+  document.getElementById("myForm").style.display = "none";
+}
+
+const form = document.getElementById("kanbanform");
+const button = document.querySelector("#kanbanform > button");
+var kanbanInput = document.getElementById("kanbanInput");
+var kanbanlist = document.getElementById("kanbanlist");
+var taskDueInput = document.getElementById("taskDueInput");
+var taskDateInput = document.getElementById("taskDateInput");
+var timeAmountInput = document.getElementById("timeAmountInput");
+var levelInput = document.getElementById("levelInput");
+  
+form.addEventListener("submit", function(event){
+    event.preventDefault();
+    let kanban = kanbanInput.value;
+    let taskDue = taskDueInput.value;
+    let taskDate = taskDateInput.value;
+    let timeAmount = timeAmountInput.value;
+    let levelRating = levelRatingInput.options[levelInput.selectedIndex].value;
+    if (task) {
+      addTask(kanban, taskDue, taskDate, timeAmount, levelRating, false);
+
+    }
+  })
+  
+var kanbanListArray = [];
+  
+function addKanban(kanbanDescription, taskDate, timeAmount,  levelRating, taskDue, taskStatus) {
+    let d = new Date();
+    let dateCreated = d.getFullYear();
+    let task = {
+      id: Date.now(),
+      kanbanDescription,
+      taskDate,
+      dateCreated,
+      timeAmount,
+      levelRating,
+      taskDue,
+      taskStatus
+    };
+    kanbanListArray.push(kanban);
+    console.log(kanbanListArray);
+    renderTask(task);
+}
+  
+function renderTask(task){
+updateEmpty();
+//Create HTML elements
+let item = document.createElement("li");
+item.setAttribute('data-id', task.id);
+item.innerHTML = "<p>" + task.taskDescription.bold() + "<br>" + "Due: ".bold() + task.completionTime + ", " + task.dueDate + "<br>" + "Time: ".bold() + task.estimatedTime + " min" + "<br>" + "Priority: ".bold() + task.priorityRating + "</p>";
+  
+taskscroll.appendChild(item);
+
+//Extra Task DOM elements
+let delButton = document.createElement("button");
+delButton.classList.add("fa", "fa-trash");
+item.appendChild(delButton);
+  //Event Listeners for DOM addEventListener
+delButton.addEventListener("click", function(event){
+    event.preventDefault();
+    let id = event.target.parentElement.getAttribute('data-id');
+    let index = taskListArray.findIndex(task => task.id === Number(id));
+    removeItemFromArray(taskListArray, index)
+    console.log(taskListArray);
+    updateEmpty();
+    localStorage.setItem('task', JSON.stringify(task))
+    item.remove();
+})
+
+const saveToLocalStorage = () => {
+  localStorage.setItem('task', JSON.stringify(task))
+}
+
+submit.addEventListener("click", saveToLocalStorage)
+
+//Clear the input form*/
+form.reset();
+}
+
+
+function removeItemFromArray(arr, index) {
+  if (index > -1){
+    arr.splice(index, 1)
+  }
+  return arr;
+}
+
+function updateEmpty() {
+  if (taskListArray.length > 0){
+    document.getElementById('emptyList').style.display = 'none';
+  } else {
+    document.getElementById('emptyList').style.display = 'block';
+  }
+}
+
+
+

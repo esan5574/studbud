@@ -1,0 +1,15 @@
+document.getElementById("kanbanForm").style.display = "none";
+
+addBtn.addEventListener("click", openForm);
+function openForm(){ 
+  document.getElementById("kanbanForm").style.display = "block";
+}
+
+closeBtn.addEventListener("click", closeForm);
+function closeForm(){ 
+  document.getElementById("myForm").style.display = "none";
+}
+
+<div id="taskscroll"> <!--Changed to a scroll list instead of accordion (a simpler solution coding wise)-->
+                    <p id="emptyList">You have not added any task yet.</p>
+                </div>
