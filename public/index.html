@@ -24,7 +24,6 @@
     <div id="home" class="page-container">
         <h1>HOME</h1>
         <div id="home-grid">
-            <!-- comment -->
             <div class="form-popup" id="myForm">
                 <form id="taskform" class="form-container">
                     <h3>ADD TASK<button type="button" id="btnCancel" >x</button></h3>
@@ -64,7 +63,7 @@
                     <ul id="t-buttons">
                         <li><button id="start">Start</button></li>
                         <li><button id="pause">Stop</button></li>
-                        <li><button id="reset">Reset</button></li>
+                        <li><button id="t-reset">Reset</button></li>
                     </ul>
                 </div>
             </div>
@@ -93,7 +92,7 @@
         </div>
     </div>
 
-    <div id="myboard" class="page-container"> <!--did not get to implement-->
+    <div id="myboard" class="page-container"> <!--did not complete coding this function // had issues with localstorage & dragndrop-->
         <h1>MY BOARD<button id="addButton">+</button></h1>
         <div class="add-popup" id=addForm>
             <form id="columnForm" class="add-container">
@@ -104,7 +103,7 @@
             </form>
         </div>
 
-        <div id="theboards">
+        <div id="theboards"> 
             <div id="toDoList">
                 <h3>TO DO<button id="addBtn">+</button></h3>
                 <div class="kanban-popup" id=kanbanForm>
@@ -132,15 +131,16 @@
                     </form>
                 </div>
                 <div id="kanbanTaskList">
-                    <div id="kanbanTask"> <!--Changed to a scroll list instead of accordion (a simpler solution coding wise)-->
+                    <div id="kanbanTask" > <!--Changed to a scroll list instead of accordion (a simpler solution coding wise)-->
                         <p id="emptyKanban">You have not added any task yet.</p>
-                    </div>
+                    </div>                
                 </div>
                 
                 
             </div>
-            <div id="newColumn">
+            <div id="newColumn"> <!--dropzone-->
                 <div id="emptyColumn"></div>
+                
             </div>
         </div> 
     </div>

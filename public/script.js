@@ -6,6 +6,7 @@ import './components/acronym';
 import './components/kanban-column';
 import './components/kanban-task';
 
+
 const links = document.querySelectorAll('nav > ul > li > a');
 const pages = document.querySelectorAll('.page-container');
 

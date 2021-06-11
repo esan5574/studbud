@@ -49,5 +49,5 @@ document.addEventListener('click', (e) => {
 
   if(el.id === 'start') timeStart();
   if(el.id === 'pause') timePaused();
-  if(el.id === 'reset') timeReset();
+  if(el.id === 't-reset') timeReset();
 })

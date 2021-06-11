@@ -1,4 +1,3 @@
-//local storage for kanban
 document.getElementById("myForm").style.display = "none";
 
 openButton.addEventListener("click", openForm);
@@ -74,7 +73,6 @@ delButton.addEventListener("click", function(event){
     removeItemFromArray(taskListArray, index)
     console.log(taskListArray);
     updateEmpty();
-    localStorage.setItem('task', JSON.stringify(task))
     item.remove();
 })
 

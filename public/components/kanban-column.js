@@ -1,4 +1,3 @@
-//local storage for kanban
 document.getElementById("addForm").style.display = "none";
 
 addButton.addEventListener("click", openForm);
@@ -39,9 +38,7 @@ function renderColumn(column){
 updateEmpty();
 //Create HTML elements
 let item = document.createElement("li");
-item.setAttribute('data-id', column.id);
 item.innerHTML = "<h3>" + column.columnDescription + "</h3>";
-  
 newColumn.appendChild(item);
 
 //Extra Task DOM elements REMOVE THIS FOR NOW
@@ -58,6 +55,7 @@ delButton.addEventListener("click", function(event){
     updateEmpty();
     item.remove();
 })
+
 
 //Clear the input form*/
 form.reset();

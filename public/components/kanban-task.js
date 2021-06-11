@@ -48,17 +48,15 @@ function addKanban(kanbanDescription, taskDate, timeAmount,  levelRating, taskDu
       taskStatus
     };
     kanbanListArray.push(kanban);
-    console.log(kanbanListArray);
     renderKanban(kanban);
 }
-  
+
 function renderKanban(kanban){
 updateEmpty();
 //Create HTML elements
 let item = document.createElement("li");
-item.setAttribute('data-id', kanban.id);
+item.draggable = "true"
 item.innerHTML = "<p>" + kanban.kanbanDescription.bold() + "<br>" + "Due: ".bold() + kanban.taskDue + ", " + kanban.taskDate + "<br>" + "Time: ".bold() + kanban.timeAmount + " min" + "<br>" + "Priority: ".bold() + kanban.levelRating + "</p>";
-  
 kanbanTask.appendChild(item);
 
 //Clear the input form*/
