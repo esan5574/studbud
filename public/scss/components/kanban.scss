@@ -19,64 +19,13 @@
   border-radius: 20px;
   width: 350px;
   margin: 0px 10px;
-}
-
-#btnClose{
-  position: absolute;
-  right: 10px;
-  height: 30px;
-  width: 30px;
-  border: none;
-  border-radius: 50%;
-  cursor: pointer;
-}
-.add-popup {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 1;
-}
-.add-container {
-  max-width: 300px;
-  padding: 10px;
-  background-color: #DEDEDE;
-  border-radius: 20px;
-}
-.add-container h3{
-  margin: 5px 40px 5px 0px;
-  display: flex;
-  align-items: baseline;
-}
-
-.add-container input {
-  border: none;
-  border-radius: 5px;
-  margin: 2px;
-  outline: none;
-  padding: 2px;
-}
-.add-container select {
-  border: none;
-  border-radius: 5px;
-  margin: 2px;
-  outline: none;
-  padding: 2px;
-} 
-.add-container .submit{
-  background-color: white;
-  border-radius: 10px;
-  border: none;
-  padding: 10px 40px;
-  margin: 10px 10px 0px 10px;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  cursor: pointer;
+  display: table;
 }
 
 #theboards {
   display: flex;
+  overflow: auto;
+  height: 80vh;
 }
 
 #theboards li{
@@ -95,10 +44,29 @@
   padding: 20px;
   color: white; 
   text-transform: uppercase;
+  display: inline-flex;
+  align-items: center;
+}
+
+#addBtn {
+  background-color: white;
+  font-size: 20px;
+  color: #6699D4;
+  height: 30px;
+  width: 30px;
+  border: none;
+  border-radius: 20%;
+  cursor: pointer;
+  margin: 10px;
+}
+#k-task {
+  color: white;
+  padding: 5px 20px;
 }
 
 #newColumn {
   display: flex;
+  align-items: flex-start;
 }
 
 #newColumn li button{
@@ -110,3 +78,14 @@
   cursor: pointer;
 }
 
+
+@media screen and (max-width: 800px) {
+  #myboard h1 {
+    display: inline-flex;
+    align-items: flex-end;
+}
+  #theboards {
+    display: contents;
+  }
+
+}

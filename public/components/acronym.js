@@ -24,21 +24,41 @@ function addWord(wordAcronym, wordDescription) {
 }
 
 function renderWord(word){
-//Create HTML elements
-let item = document.createElement("li");
-item.innerHTML = "<p>" + word.wordAcronym.bold() + ": " + word.wordDescription + "</p>";
+  updateEmpty();
 
-wordlist.appendChild(item);
-//Extra Task DOM elements
-let delButton = document.createElement("button");
-delButton.classList.add("fa", "fa-trash");
-item.appendChild(delButton);
-//Event Listeners for DOM addEventListener
-delButton.addEventListener("click", function(event){
-  event.preventDefault();
-  item.remove();
-})
+  let item = document.createElement("li");
+  item.innerHTML = "<p>" + word.wordAcronym.bold() + ": " + word.wordDescription + "</p>";
 
-//Clear the input form
+  wordlist.appendChild(item);
+
+  let delButton = document.createElement("button");
+  delButton.classList.add("fa", "fa-trash");  
+  item.appendChild(delButton);
+  
+  delButton.addEventListener("click", function(event){
+    event.preventDefault();
+    let id = event.target.parentElement.getAttribute('data-id');
+    let index = wordListArray.findIndex(word => word.id === Number(id));
+    removeItemFromArray(wordListArray, index)
+    updateEmpty();
+    item.remove();
+  })
+
+
 form.reset();
+}
+
+function removeItemFromArray(arr, index) {
+  if (index > -1){
+    arr.splice(index, 1)
+  }
+  return arr;
+}
+
+function updateEmpty() {
+  if (wordListArray.length > 0){
+    document.getElementById('emptyAcronym').style.display = 'none';
+  } else {
+    document.getElementById('emptyAcronym').style.display = 'block';
+  }
 }

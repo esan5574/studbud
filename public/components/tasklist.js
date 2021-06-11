@@ -74,12 +74,14 @@ delButton.addEventListener("click", function(event){
     removeItemFromArray(taskListArray, index)
     console.log(taskListArray);
     updateEmpty();
+    localStorage.setItem('task', JSON.stringify(task))
     item.remove();
 })
 
 //Clear the input form*/
 form.reset();
 }
+
 
 function removeItemFromArray(arr, index) {
   if (index > -1){

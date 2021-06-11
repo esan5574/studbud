@@ -44,11 +44,6 @@ item.innerHTML = "<h3>" + column.columnDescription + "</h3>";
   
 newColumn.appendChild(item);
 
-//meatball menu that stores edit and delete task (MAY NOT USE)
-/*let menuButton = document.createElement("button");
-menuButton.classList.add("fa", "fa-ellipsis-h", "fa-6");
-item.appendChild(menuButton);*/
-
 //Extra Task DOM elements REMOVE THIS FOR NOW
 let delButton = document.createElement("button");
 delButton.classList.add("fa", "fa-trash");
